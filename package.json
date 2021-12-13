@@ -1,0 +1,27 @@
+{
+  "name": "@SolaceDev/maas-ux-icons",
+  "version": "0.0.1",
+  "description": "Icons for Solace Cloud",
+  "main": "index.js",
+  "scripts": {
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/SolaceDev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolaceDev/maas-ux-icons.git"
+  },
+  "keywords": [
+    "icons",
+    "ux",
+    "sc",
+    "solace"
+  ],
+  "author": "Kevin Lidstone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SolaceDev/maas-ux-icons/issues"
+  },
+  "homepage": "https://github.com/SolaceDev/maas-ux-icons#readme"
+}
