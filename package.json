@@ -7,9 +7,18 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/SolaceDev"
   },
+  "keywords": [
+    "icons",
+    "ux",
+    "sc",
+    "solace"
+  ],
+  "bugs": {
+    "url": "https://github.com/SolaceDev/maas-ux-icons/issues"
+  },
+  "author": "Kevin Lidstone",
   "version": "1.0.0",
   "description": "Svg icons library",
-  "author": "",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
