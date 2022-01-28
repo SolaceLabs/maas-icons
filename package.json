@@ -1,10 +1,16 @@
 {
-  "name": "maas-icons",
+  "name": "@SolaceDev/maas-icons",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SolaceDev/maas-icons"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/SolaceDev"
+  },
   "version": "1.0.0",
   "description": "Svg icons library",
   "author": "",
   "license": "MIT",
-  "repository": "/maas-ux-icons",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
