@@ -21,7 +21,7 @@ jobs:
       - name: "Setup Node.js"
         uses: "actions/setup-node@v1"
         with:
-          node-version: 12
+          node-version: 14
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@master"
         with:
@@ -30,5 +30,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TAG_PUSH_TOKEN }}
       - name: "cat package.json"
         run: cat ./package.json
-
-  

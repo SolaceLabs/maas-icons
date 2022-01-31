@@ -29,6 +29,7 @@ npm install --save @SolaceDev/maas-icons
 ```
 
 ## Usage
+
 Import the svg sprite file to top level of the application.
 
 ```tsx
@@ -39,15 +40,19 @@ import 'maas-icons/dist/index.css'
 
 const App = () => {
   return (
-      <div style={{ display: "none" }}>
+     <>
+       // Imported svg sprites should be hidden in the dom.
+       <div style={{ display: "none" }}>
         <SolaceSvgs />
+        </div>
         <OtherComponents>
-      </div>
+      </>
   );
 };
 ```
 
 ## Development
+
 **Note for developers** : Don't forget to include one of the following values in a commit, before pushing your branch to master. This would trigger a automated package version update.
 
 | Value | Defintition                                                               |
