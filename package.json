@@ -5,7 +5,7 @@
     "url": "https://github.com/SolaceDev/maas-icons"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/SolaceDev"
+    "registry": "https://npm.pkg.github.com/@solacedev"
   },
   "keywords": [
     "icons",
