@@ -27,7 +27,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production && npm run svg-stripe",
+    "build": "rm -rf dist && microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production && npm run svg-stripe",
     "build:dev": "microbundle watch --jsx React.createElement --no-compress --format cjs --define process.env.NODE_ENV=development",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
@@ -39,17 +39,12 @@
     "deploy": "gh-pages -d example/build",
     "svg-stripe": "npx svg-sprite --symbol --shape-id-separator=_ --symbol-dest=./dist ./icons/**/*.svg"
   },
-  "peerDependencies": {
-    "react": "^16.0.0"
-  },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^25.1.4",
     "@types/node": "^12.12.38",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "babel-eslint": "^10.0.3",
@@ -68,8 +63,6 @@
     "microbundle": "^0.14.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-scripts": "^5.0.0",
     "typescript": "^4.5.5"
   },
