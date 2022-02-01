@@ -12,7 +12,7 @@ You can authenticate to GitHub Packages with npm by creating a npmrc file in you
 
 ```
 
-@SolaceDev:registry=https://npm.pkg.github.com
+@solacedev:registry=https://npm.pkg.github.com
 
 //npm.pkg.github.com/:_authToken=GITHUB_TOKEN
 
@@ -25,7 +25,7 @@ See this [link](https://docs.github.com/en/github/authenticating-to-github/keepi
 ## Install
 
 ```bash
-npm install --save @SolaceDev/maas-icons
+npm install --save @solacedev/maas-icons
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ Import the svg sprite file to top level of the application.
 ```tsx
 import React, { Component } from 'react'
 
-import { ReactComponent as SolaceSvgs } from from '@SolaceDev/maas-icons/dist/svg/sprite.symbol.svg"'
+import { ReactComponent as SolaceSvgs } from from '@solacedev/maas-icons/dist/svg/sprite.symbol.svg"'
 import 'maas-icons/dist/index.css'
 
 const App = () => {
