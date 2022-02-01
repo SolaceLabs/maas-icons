@@ -17,7 +17,7 @@
     "url": "https://github.com/SolaceDev/maas-ux-icons/issues"
   },
   "author": "Kevin Lidstone",
-  "version": "0.0.11",
+  "version": "0.0.6",
   "description": "Svg icons library",
   "license": "MIT",
   "main": "dist/index.js",
@@ -30,64 +30,41 @@
     "build": "rm -rf dist && microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production && npm run build:svg",
     "build:dev": "microbundle watch --jsx React.createElement --no-compress --format cjs --define process.env.NODE_ENV=development",
     "prepare": "run-s build",
-    "test": "nyc ava",
+    "test": "run-s test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
-    "build:svg": "svg-sprite --symbol --shape-id-separator=_ --symbol-dest=./dist ./icons/**/*.svg",
-    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
-    "prerelease": "npm run update:check && npm run contributors",
-    "release:github": "conventional-github-releaser -p angular",
-    "release:tags": "git push --follow-tags origin HEAD:master",
-    "release": "standard-version -a",
-    "update:check": "ncu -- --error-level 2",
-    "update": "ncu -u"
+    "build:svg": "svg-sprite --symbol --shape-id-separator=_ --symbol-dest=./dist ./icons/**/*.svg"
   },
   "devDependencies": {
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
-    "ava": "latest",
-    "ci-publish": "latest",
-    "conventional-github-releaser": "latest",
-    "finepack": "latest",
-    "git-authors-cli": "latest",
-    "lint-staged": "latest",
-    "npm-check-updates": "latest",
-    "nyc": "latest",
-    "prettier-standard": "latest",
-    "simple-git-hooks": "latest",
-    "standard": "latest",
-    "standard-markdown": "latest",
-    "standard-version": "latest"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^12.12.38",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "gh-pages": "^3.2.3",
+    "microbundle": "^0.14.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "react-scripts": "^5.0.0",
+    "svg-sprite": "^1.5.3",
+    "typescript": "^4.5.5"
   },
   "files": [
     "dist"
-  ],
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "package.json": [
-      "finepack"
-    ],
-    "*.js,!*.min.js,": [
-      "prettier-standard"
-    ],
-    "*.md": [
-      "standard-markdown"
-    ]
-  },
-  "simple-git-hooks": {
-    "commit-msg": "npx commitlint --edit",
-    "pre-commit": "npx lint-staged"
-  },
-  "dependencies": {
-    "automate-release": "^2.0.9"
-  }
+  ]
 }
