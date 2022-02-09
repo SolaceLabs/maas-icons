@@ -27,8 +27,8 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "rm -rf dist && microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production && npm run build:svg",
-    "build:dev": "microbundle watch --jsx React.createElement --no-compress --format cjs --define process.env.NODE_ENV=development",
+    "build": "rm -rf dist && node createIconTypes.js && microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production && npm run build:svg",
+    "build:dev": "node createIconTypes.js && microbundle watch --jsx React.createElement --no-compress --format cjs --define process.env.NODE_ENV=development",
     "prepare": "run-s build",
     "test": "run-s test:lint test:build",
     "test:build": "run-s build",
