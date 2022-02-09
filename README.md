@@ -11,17 +11,8 @@ Before installing the package this step needs to be completed.
 You can authenticate to GitHub Packages with npm by creating a npmrc file in your root directory.
 
 ```
-
-
-
 @solacedev:registry=https://npm.pkg.github.com
-
-
-
 //npm.pkg.github.com/:_authToken=GITHUB_TOKEN
-
-
-
 ```
 
 GITHUB_TOKEN needs to be replaced by user specific github token. Make sure the package permissions ( write:packages, read:packages ) are correctly selected during token creation, and SSO is also enabled.
