@@ -27,7 +27,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "rm -rf dist && node createIconTypes.js && microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production && npm run build:svg",
+    "build": "rm -rf dist && node createIconTypes.js && microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production && npm run build:svg && npm run build:copy",
     "build:dev": "node createIconTypes.js && microbundle watch --jsx React.createElement --no-compress --format cjs --define process.env.NODE_ENV=development",
     "prepare": "run-s build",
     "test": "run-s test:lint test:build",
@@ -37,7 +37,8 @@
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
-    "build:svg": "svg-sprite --symbol --shape-id-separator=_ --symbol-dest=./dist ./icons/**/*.svg"
+    "build:copy": "cp -rv ./illustrations ./dist",
+    "build:svg": "svg-sprite --symbol --shape-id-separator=_ --symbol-dest=./dist --symbol-example true --symbol-example-dest index.html ./icons/**/*.svg"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
