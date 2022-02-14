@@ -8,7 +8,7 @@
 
 Before installing the package this step needs to be completed.
 
-You can authenticate to GitHub Packages with npm by creating a npmrc file in your root directory.
+You can authenticate to GitHub Packages with npm by creating a `~/.npmrc` file in your root directory.
 
 ```
 @solacedev:registry=https://npm.pkg.github.com
@@ -22,64 +22,64 @@ See this [link](https://docs.github.com/en/github/authenticating-to-github/keepi
 ## Install
 
 ```bash
-
 npm install --save @solacedev/maas-icons
-
 ```
 
 ## Usage
 
-Import the svg sprite file to top level of the application.
+Import the SVG sprite file to top level of the application. And then look at [Icons enum](./src/icons.ts) for which ID to use.
 
 ```tsx
+import { ReactElement } from 'react';
+import { ReactComponent as SolaceSvgs } from from '@solacedev/maas-icons/dist/svg/sprite.symbol.svg';
 
-import  React, { Component } from  'react'
-import { ReactComponent  as  SolaceSvgs } from  from  '@solacedev/maas-icons/dist/svg/sprite.symbol.svg'
-
-const  App = () => {
-
-return (
-
-<>
-
-// Imported svg sprites should be hidden in the dom.
-
-<div  style={{ display:  "none" }}>
-
-<SolaceSvgs  />
-
-</div>
-
-<OtherComponents>
-
-</>
-
-);
-
+const App = (): ReactElement => {
+  return (
+    <>
+      {/* Imported svg sprites should be hidden in the dom. */}
+      <div style={{ display: "none" }}>
+        <SolaceSvgs />
+      </div>
+      <OtherComponents />
+    </>
+  );
 };
-
 ```
 
-## Development
+To import an illustration using ReactJS (assuming you have proper SVG support with babel/webpack):
+
+```tsx
+import { ReactElement } from "react";
+import { ReactComponent as Designer } from "@solacedev/maas-icons/dist/illustrations/designer.svg";
+
+const Demo = (): ReactElement => {
+  return (
+    <div>
+      <Designer />
+    </div>
+  );
+};
+```
+
+## Sample preview of the sprite
+
+The build step will create a sample page with all the monochrome SVGs [here](./dist/index.html).
 
 # How to add new Icons
 
-1.  Rename the svg file to use camelCase eg: arrowUp.svg
-2.  icons directory is the main directory to store svg files. If a new subfolder is required try to use just the size name. eg: icons/24px
-3.  Add the new svg file to appropriate folder under **icons** directory
-4.  Create a pr and then release the package. Instructions can be found [here](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) for package release.
+1. Rename the SVG file to use camelCase eg: `arrowUp.svg`
+2. For monochrome SVGs, `./icons` folder is the main directory to store SVG files. If a new subfolder is required try to use just the size name. eg: `./icons/24px`
+3. For illustrations SVGs, `./illustrations` folder is the location to store them. These SVGs are copied as-is into the `./dist` folder.
+4. Add the new SVG file to appropriate folder under **icons** directory
+5. Create a Pull Request and then release the package. Instructions can be found [here](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) for package release.
 
-**Note for developers** : Don't forget to include one of the following values in a commit, before pushing your branch to master. This would trigger a automated package version update.
+**Note for developers** : Don't forget to include one of the following values in a commit, before pushing your branch to master. This would trigger an automated package version update.
 
-| Value | Defintition |
-
+| Value | Defintition                                                               |
 | ----- | ------------------------------------------------------------------------- |
-
-| major | MAJOR version when you make incompatible API changes |
-
+| major | MAJOR version when you make incompatible API changes                      |
 | minor | MINOR version when you add functionality in a backwards compatible manner |
-
-| patch | PATCH version when you make backwards compatible bug fixes |
+| patch | PATCH version when you make backwards compatible bug fixes                |
 
 [Semantic Versioning](https://semver.org/)
 

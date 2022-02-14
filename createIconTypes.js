@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-var-requires */
 const fs = require("fs");
 const path = require("path");
-const src = "./icons";
-const enums = ["export enum Icons {"];
+const enums = [];
 
 const scan = (folder) => {
   fs.readdirSync(folder).forEach((file) => {
@@ -21,12 +21,16 @@ const scan = (folder) => {
   });
 };
 
-scan(src);
+scan("./icons");
 
+enums.sort();
+enums.unshift("export enum Icons {");
 enums.push("}\n");
-console.log(enums.join("\n"));
 
-fs.writeFile("src/icons.ts", enums.join("\n"), function (err) {
+const source = enums.join("\n");
+console.log(source);
+
+fs.writeFile("src/icons.ts", source, function (err) {
   if (err) throw err;
   console.log("Icons type file generated successfully.");
 });
