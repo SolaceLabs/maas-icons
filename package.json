@@ -2,7 +2,7 @@
   "name": "@solacedev/maas-icons",
   "repository": {
     "type": "git",
-    "url": "https://github.com/solacedev/maas-ux-icons"
+    "url": "https://github.com/solacedev/maas-icons"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/solacedev"
