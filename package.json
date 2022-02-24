@@ -17,7 +17,7 @@
     "url": "https://github.com/solacedev/maas-ux-icons/issues"
   },
   "author": "Kevin Lidstone",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "Svg icons library",
   "license": "MIT",
   "main": "dist/index.js",
