@@ -49,13 +49,27 @@ const App = (): ReactElement => {
 To import an illustration using ReactJS (assuming you have proper SVG support with babel/webpack):
 
 ```tsx
-import { ReactElement } from "react";
+import { SolaceIcon } from "@SolaceDev/maas-react-components";
 import { ReactComponent as Designer } from "@solacedev/maas-icons/dist/illustrations/designer.svg";
 
 const Demo = (): ReactElement => {
   return (
     <div>
       <Designer />
+    </div>
+  );
+};
+```
+
+To import icons, leverage the `SolaceIcon` from `maas-react-components` and reference the icon name (defined in `./icons.ts` file):
+
+```tsx
+import { SolaceIcon } from "@SolaceDev/maas-react-components";
+
+const Demo = (): ReactElement => {
+  return (
+    <div>
+      <SolaceIcon name={"icons_24px_Add"} />
     </div>
   );
 };
