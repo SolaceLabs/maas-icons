@@ -9,23 +9,24 @@ jobs:
   bump-version:
     name: "Bump Version on main"
     runs-on: ubuntu-latest
-
     steps:
       - name: "Checkout source code"
         uses: "actions/checkout@v2"
         with:
           ref: ${{ github.ref }}
+          token: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
+
       - name: "cat package.json"
         run: cat ./package.json
-      - name: "Setup Node.js"
-        uses: "actions/setup-node@v1"
-        with:
-          node-version: 20
+
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@master"
         with:
+          minor-wording: "solaceminor,SolaceMinor,SOLACEMINOR"
+          major-wording: "solacemajor,SolaceMajor,SOLACEMAJOR"
+          patch-wording: "solacepatch,SolacePatch,SOLACEPATCH"
           tag-prefix: ""
         env:
-          GITHUB_TOKEN: ${{ secrets.TAG_PUSH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
       - name: "cat package.json"
         run: cat ./package.json
