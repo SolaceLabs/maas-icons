@@ -97,6 +97,19 @@ The build step will create a sample page with all the monochrome SVGs [here](./d
 
 [Semantic Versioning](https://semver.org/)
 
+6. Publish new version when changes are merged: 
+   
+   <img width="298" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/4aab42ee-5c07-4539-97e9-ad8074a18975">
+
+   Navigate to releases, then click on draft new release, select the tag corresponding to the semantic version you just created, generate release notes then click on publish release.
+   
+   <img width="980" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/eaef76d2-11f2-4296-9f55-2a71a9a6cde5">
+
+   You can monitor the state of your release under the Actions tab.
+
+   <img width="1581" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/0adff151-0a3b-4aaf-8056-8019b59f7773">
+
+
 ## License
 
 MIT © [](https://github.com/)
