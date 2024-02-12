@@ -44,7 +44,6 @@
     "prepublishOnly": "npm run optimize && npm run optimize:illustartions && npm run generateicons  && npm run build && npm run build:copyillustrations"
   },
   "devDependencies": {
-    "@SolaceDev/maas-react-components": "^8.0.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^25.1.4",
@@ -71,6 +70,9 @@
     "svg-sprite": "^1.5.3",
     "svgo": "^3.2.0",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@SolaceDev/maas-react-components": "^8.0.5"
   },
   "files": [
     "dist"
