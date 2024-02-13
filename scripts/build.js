@@ -37,7 +37,8 @@ function convertToHumanReadable(directoryName) {
     .split("/")
     .filter((segment) => segment !== "optimized")
     .map((segment) => segment.replace("px", ""));
-  return segments.join("");
+  // reverse is to handle the naming convention of the icons, where the size is at the end
+  return segments.reverse().join("");
 }
 
 /**
