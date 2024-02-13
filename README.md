@@ -61,7 +61,7 @@ const Demo = (): ReactElement => {
 # How to add new Icons
 
 1. Rename the SVG file to use camelCase eg: `arrowUp.svg`
-2. For monochrome SVGs, `./icons` folder is the main directory to store SVG files. If a new subfolder is required try to use just the size name. eg: `./icons/24px`
+2. For monochrome SVGs, `./icons` folder is the main directory to store SVG files. If a new subfolder is required try to use just the size name. eg: `./icons/24px`.
 3. For illustrations SVGs, `./illustrations` folder is the location to store them. These SVGs are copied as-is into the `./dist` folder.
 4. Add the new SVG file to appropriate folder under **icons** directory
 5. Create a Pull Request and then release the package. Instructions can be found [here](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) for package release.
