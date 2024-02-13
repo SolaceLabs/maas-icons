@@ -25,8 +25,9 @@ fs.mkdir(targetDir, { recursive: true }, (err) => {
       fs.copyFile(sourceFile, targetFile, (err) => {
         if (err) throw err; // If an error occurred during file copying, throw the error
         // Log a message indicating that the file was copied successfully
-        console.log(`${file} was copied to ${targetDir}`);
+        // console.log(`${file} was copied to ${targetDir}`);
       });
     });
   });
+  console.log("Illustrations copied successfully");
 });

@@ -16,7 +16,7 @@ const replaceXmlSpaceInFiles = require("./replaceTags");
  */
 async function generateSvgComponent(svg, componentName) {
   const code = `
-import { createSvgIcon } from "@SolaceDev/maas-react-components";
+import { createSvgIcon } from "@mui/material/utils";
 const ${componentName} = createSvgIcon(
   ${svg}
 , '${componentName}');
@@ -168,7 +168,7 @@ async function buildIcons() {
         icons.flatMap(async ({ componentName, svg }) => {
           const content = await generateSvgComponent(svg, componentName);
           const types = [
-            `import { SvgIconProps } from "@SolaceDev/maas-react-components";`,
+            `import { SvgIconProps } from "@mui/material";`,
             `declare const ${componentName}: SvgIconProps;`,
             `export default ${componentName};`,
           ];
