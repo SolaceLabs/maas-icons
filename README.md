@@ -27,19 +27,16 @@ npm install --save @solacedev/maas-icons
 
 ## Usage
 
-Import the SVG sprite file to top level of the application. And then look at [Icons enum](./src/icons.ts) for which ID to use.
+Import the SVG Icon file in the component you want to use it in.
 
 ```tsx
-import { ReactElement } from 'react';
-import { ReactComponent as SolaceSvgs } from from '@solacedev/maas-icons/dist/svg/sprite.symbol.svg';
+import { ReactElement } from "react";
+import { Delete24Icon } from "@SolaceDev/maas-icons";
 
 const App = (): ReactElement => {
   return (
     <>
-      {/* Imported svg sprites should be hidden in the dom. */}
-      <div style={{ display: "none" }}>
-        <SolaceSvgs />
-      </div>
+      <Delete24Icon />
       <OtherComponents />
     </>
   );
@@ -61,28 +58,10 @@ const Demo = (): ReactElement => {
 };
 ```
 
-To import icons, leverage the `SolaceIcon` from `maas-react-components` and reference the icon name (defined in `./icons.ts` file):
-
-```tsx
-import { SolaceIcon } from "@SolaceDev/maas-react-components";
-
-const Demo = (): ReactElement => {
-  return (
-    <div>
-      <SolaceIcon name={"icons_24px_Add"} />
-    </div>
-  );
-};
-```
-
-## Sample preview of the sprite
-
-The build step will create a sample page with all the monochrome SVGs [here](./dist/index.html).
-
 # How to add new Icons
 
 1. Rename the SVG file to use camelCase eg: `arrowUp.svg`
-2. For monochrome SVGs, `./icons` folder is the main directory to store SVG files. If a new subfolder is required try to use just the size name. eg: `./icons/24px`
+2. For monochrome SVGs, `./icons` folder is the main directory to store SVG files. If a new subfolder is required try to use just the size name. eg: `./icons/24px`.
 3. For illustrations SVGs, `./illustrations` folder is the location to store them. These SVGs are copied as-is into the `./dist` folder.
 4. Add the new SVG file to appropriate folder under **icons** directory
 5. Create a Pull Request and then release the package. Instructions can be found [here](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) for package release.
@@ -97,18 +76,17 @@ The build step will create a sample page with all the monochrome SVGs [here](./d
 
 [Semantic Versioning](https://semver.org/)
 
-6. Publish new version when changes are merged: 
-   
+6. Publish new version when changes are merged:
+
    <img width="298" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/4aab42ee-5c07-4539-97e9-ad8074a18975">
 
    Navigate to releases, then click on draft new release, select the tag corresponding to the semantic version you just created, generate release notes then click on publish release.
-   
+
    <img width="980" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/eaef76d2-11f2-4296-9f55-2a71a9a6cde5">
 
    You can monitor the state of your release under the Actions tab.
 
    <img width="1581" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/0adff151-0a3b-4aaf-8056-8019b59f7773">
-
 
 ## License
 
