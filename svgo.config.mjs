@@ -46,5 +46,11 @@ export default {
     "removeStyleElement",
     "removeScriptElement",
     "removeEmptyContainers",
+    {
+      name: "removeAttrs",
+      params: {
+        attrs: ["fill"],
+      },
+    },
   ],
 };
