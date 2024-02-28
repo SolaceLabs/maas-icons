@@ -12,25 +12,29 @@ const replaceXmlSpaceInFiles = require("./replaceTags");
  *
  * @param {string} svg - The SVG content.
  * @param {string} componentName - The name of the React component.
+ * @param {string} size - The size of the component.
  * @returns {string} The generated React component code.
  */
-async function generateSvgComponent(svg, componentName) {
+async function generateSvgComponent(svg, componentName, size) {
   const code = `
-import { createSvgIcon } from "@mui/material/utils";
-const ${componentName} = createSvgIcon(
-  ${svg}
-, '${componentName}');
-export default ${componentName};
-  `;
+import { SvgIcon, SvgIconProps } from "@mui/material";
+const ${componentName} = (props: Omit<SvgIconProps, "fontSize">) => {
+	const { sx, ...rest } = props;
+	return (
+		<SvgIcon sx={{ fontSize: ${size}, ...sx }} {...rest}>
+    ${svg}
+		</SvgIcon>
+	);
+};
+export default ${componentName};`;
 
   return code;
 }
 
 /**
- * This function converts a directory name to a human-readable format.
- *
+ * Converts a directory name to a human-readable format.
  * @param {string} directoryName - The directory name to convert.
- * @returns {string} The converted directory name.
+ * @returns {Object} - An object containing the converted name and size.
  */
 function convertToHumanReadable(directoryName) {
   const segments = directoryName
@@ -38,7 +42,7 @@ function convertToHumanReadable(directoryName) {
     .filter((segment) => segment !== "optimized")
     .map((segment) => segment.replace("px", ""));
   // reverse is to handle the naming convention of the icons, where the size is at the end
-  return segments.reverse().join("");
+  return { name: segments.reverse().join(""), size: segments[0] };
 }
 
 /**
@@ -91,10 +95,11 @@ async function getIcons(dir) {
     return Promise.all(
       files.map(async (file) => {
         const baseName = path.basename(file, ".svg");
-        const iconName = `${baseName}${humanReadableDirName}Icon`;
+        const iconName = `${baseName}${humanReadableDirName.name}Icon`;
         return {
           svg: await fs.readFile(path.join(dir, file), "utf8"),
           componentName: camelcase(iconName, { pascalCase: true }),
+          size: humanReadableDirName.size,
         };
       })
     );
@@ -165,11 +170,11 @@ async function buildIcons() {
     const icons = await getIcons(dir);
     if (icons.length > 0) {
       await Promise.all(
-        icons.flatMap(async ({ componentName, svg }) => {
-          const content = await generateSvgComponent(svg, componentName);
+        icons.flatMap(async ({ componentName, svg, size }) => {
+          const content = await generateSvgComponent(svg, componentName, size);
           const types = [
             `import { SvgIconProps } from "@mui/material";`,
-            `declare const ${componentName}: SvgIconProps;`,
+            `declare const ${componentName}:(props: Omit<SvgIconProps, "fontSize">) => React.JSX.Element;`,
             `export default ${componentName};`,
           ];
           return [
