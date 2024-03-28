@@ -2,7 +2,7 @@
   "name": "@solacedev/maas-icons",
   "repository": {
     "type": "git",
-    "url": "https://github.com/solacedev/maas-icons"
+    "url": "git+https://github.com/solacedev/maas-icons.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/solacedev"
@@ -29,8 +29,6 @@
   "scripts": {
     "build": "rm -rf dist && microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production",
     "build:dev": "microbundle watch --jsx React.createElement --no-compress --format cjs --define process.env.NODE_ENV=development",
-    "prepare": "run-s build",
-    "build:copy": "cp -r optimizedIllustrations dist/illustrations",
     "test": "run-s test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
@@ -42,7 +40,7 @@
     "optimize": "rimraf ./optimized && svgo -r --folder ./icons -o ./optimized --pretty --indent=2",
     "generateicons": "rm -rf reactGenerated && node ./scripts/build.js",
     "optimize:illustrations": "rimraf ./optimizedIllustrations && svgo --config=svgo.config.illustrations.mjs -r --folder ./illustrations -o ./optimizedIllustrations --pretty --indent=2",
-    "prepublishOnly": "npm run optimize && npm run optimize:illustrations && npm run generateicons  && npm run build && npm run build:copy"
+    "prepublishOnly": "npm run optimize && npm run optimize:illustrations && npm run generateicons  && npm run build && npm run copyillustrations"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
