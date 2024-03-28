@@ -30,7 +30,7 @@
     "build": "rm -rf dist && microbundle --compress --jsx React.createElement --format cjs,modern --define process.env.NODE_ENV=production",
     "build:dev": "microbundle watch --jsx React.createElement --no-compress --format cjs --define process.env.NODE_ENV=development",
     "prepare": "run-s build",
-    "build:copy": "cp -rv ./optimizedIllustrations ./dist/illustrations",
+    "build:copy": "cp -r optimizedIllustrations dist/illustrations",
     "test": "run-s test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
