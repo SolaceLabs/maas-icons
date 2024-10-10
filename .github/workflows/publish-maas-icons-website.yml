@@ -1,0 +1,46 @@
+name: Publish maas-icons to GitHub Pages
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  merge:
+    name: generate maas-icons and publish to github pages
+    runs-on: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'github/docs-internal'] }}
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
+
+      - name: install
+        working-directory: ./docs
+        run: npm ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
+
+      - name: Build maas-icons docs
+        working-directory: ./storybook
+        run: npm run --prefix docs build
+        env:
+          GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
+
+      - name: deploy to github page
+        env:
+          GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run --prefix docs deploy:ci
