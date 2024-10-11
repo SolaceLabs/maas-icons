@@ -34,7 +34,7 @@ jobs:
 
       - name: Build maas-icons docs
         working-directory: ./storybook
-        run: npm run --prefix docs build
+        run: npm run build
         env:
           GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
 
@@ -43,4 +43,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run --prefix docs deploy:ci
+          npm run deploy:ci
