@@ -33,12 +33,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
 
       - name: Build maas-icons docs
-        working-directory: ./storybook
+        working-directory: ./docs
         run: npm run build
         env:
           GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
 
       - name: deploy to github page
+        working-directory: ./docs
         env:
           GITHUB_TOKEN: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
         run: |
