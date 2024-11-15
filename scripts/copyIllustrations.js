@@ -17,15 +17,34 @@ fs.mkdir(targetDir, { recursive: true }, (err) => {
 
     // For each file in the source directory
     files.forEach((file) => {
-      // Construct the full paths for the source file and the target file
       const sourceFile = path.join(sourceDir, file);
       const targetFile = path.join(targetDir, file);
 
-      // Copy the source file to the target file
-      fs.copyFile(sourceFile, targetFile, (err) => {
-        if (err) throw err; // If an error occurred during file copying, throw the error
-        // Log a message indicating that the file was copied successfully
-        // console.log(`${file} was copied to ${targetDir}`);
+      fs.stat(sourceFile, (err, stats) => {
+        if (err) throw err;
+
+        if (stats.isDirectory()) {
+          fs.mkdir(targetFile, { recursive: true }, (err) => {
+            if (err) throw err;
+
+            fs.readdir(sourceFile, (err, subFiles) => {
+              if (err) throw err;
+
+              subFiles.forEach((subFile) => {
+                const sourceSubFile = path.join(sourceFile, subFile);
+                const targetSubFile = path.join(targetFile, subFile);
+
+                fs.copyFile(sourceSubFile, targetSubFile, (err) => {
+                  if (err) throw err;
+                });
+              });
+            });
+          });
+        } else {
+          fs.copyFile(sourceFile, targetFile, (err) => {
+            if (err) throw err;
+          });
+        }
       });
     });
   });
