@@ -36,11 +36,12 @@
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
-    "copyillustrations": "node ./scripts/copyIllustrations.js",
+    "copyAssets": "node ./scripts/copyAssets.js",
     "optimize": "rimraf ./optimized && svgo -r --folder ./icons -o ./optimized --pretty --indent=2",
     "generateicons": "rm -rf reactGenerated && node ./scripts/build.js",
     "optimize:illustrations": "rimraf ./optimizedIllustrations && svgo --config=svgo.config.illustrations.mjs -r --folder ./illustrations -o ./optimizedIllustrations --pretty --indent=2",
-    "prepublishOnly": "npm run optimize && npm run optimize:illustrations && npm run generateicons  && npm run build && npm run copyillustrations"
+    "optimize:images": "rimraf ./optimizedImages && svgo --config=svgo.config.illustrations.mjs -r --folder ./images -o ./optimizedImages --pretty --indent=2",
+    "prepublishOnly": "npm run optimize && npm run optimize:illustrations && npm run optimize:images && npm run generateicons  && npm run build && npm run copyAssets"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
