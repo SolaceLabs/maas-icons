@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/maas-icons.svg)](https://www.npmjs.com/package/maas-icons) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Overview
+
+The `@solacedev/maas-icons` library provides a collection of SVG icons that are wrapped in Material UI's `SvgIcon` component. The icons are organized by size (16px, 24px, 32px, 40px) and are available as React components.
+
 ## Setup npm registry
 
 Before installing the package this step needs to be completed.
@@ -25,23 +29,28 @@ See this [link](https://docs.github.com/en/github/authenticating-to-github/keepi
 npm install --save @solacedev/maas-icons
 ```
 
-## Usage
+## Basic Usage
 
-Import the SVG Icon file in the component you want to use it in.
+### Importing and Using Icons
+
+Icons are named based on their filename and size. For example, `arrowLeft.svg` in the `24px` directory becomes `ArrowLeft24Icon`.
 
 ```tsx
 import { ReactElement } from "react";
-import { Delete24Icon } from "@SolaceDev/maas-icons";
+import { ArrowLeft24Icon, Bug16Icon } from "@solacedev/maas-icons";
 
 const App = (): ReactElement => {
   return (
     <>
-      <Delete24Icon />
+      <ArrowLeft24Icon />
+      <Bug16Icon />
       <OtherComponents />
     </>
   );
 };
 ```
+
+### Using Illustrations
 
 To import an illustration using ReactJS (assuming you have proper SVG support with babel/webpack):
 
@@ -58,7 +67,196 @@ const Demo = (): ReactElement => {
 };
 ```
 
-# How to add new Icons
+## Theming and Styling Icons
+
+The icons in this library are wrapped in MUI's `SvgIcon` component, which provides several ways to customize their appearance.
+
+### 1. Using MUI's Color Properties
+
+The icons inherit color from their parent by default, but you can explicitly set colors using MUI's color properties:
+
+```tsx
+<ArrowLeft24Icon color="primary" />
+<Bug16Icon color="secondary" />
+<CheckFilled16Icon color="success" />
+<ErrorCircle16Icon color="error" />
+<ContentSearch24Icon color="warning" />
+<Terminal16Icon color="info" />
+<Broker16Icon color="action" />
+<Construction24Icon color="disabled" />
+```
+
+### 2. Using the `sx` Prop
+
+The `sx` prop allows for more advanced styling:
+
+```tsx
+<ArrowLeft24Icon 
+  sx={{ 
+    color: '#FF5722',
+    fontSize: '32px', // Override the default size
+    '&:hover': {
+      color: '#E64A19',
+    }
+  }} 
+/>
+```
+
+### 3. Using CSS Classes
+
+You can apply CSS classes using the `className` prop:
+
+```tsx
+<ArrowLeft24Icon className="my-icon-class" />
+```
+
+```css
+.my-icon-class {
+  color: #2196F3;
+  transition: transform 0.2s;
+}
+
+.my-icon-class:hover {
+  transform: scale(1.2);
+}
+```
+
+### 4. Theming with MUI Theme Provider
+
+For consistent styling across your application, use MUI's theme provider:
+
+```tsx
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  components: {
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          // Default styles for all icons
+          transition: 'all 0.2s',
+          '&:hover': {
+            transform: 'scale(1.1)',
+          },
+        },
+        fontSizeSmall: {
+          // Styles for small icons
+          color: '#1976D2',
+        },
+        fontSizeMedium: {
+          // Styles for medium icons
+          color: '#388E3C',
+        },
+        fontSizeLarge: {
+          // Styles for large icons
+          color: '#D32F2F',
+        },
+      },
+    },
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <MyComponent />
+    </ThemeProvider>
+  );
+}
+```
+
+## Advanced Usage
+
+### 1. Customizing Icon Properties
+
+You can pass any prop that MUI's `SvgIcon` accepts (except `fontSize` which is set based on the icon's size):
+
+```tsx
+<ArrowLeft24Icon 
+  titleAccess="Go back" // Adds a title for accessibility
+  htmlColor="#FF5722" // Sets the color using HTML color attribute
+  viewBox="0 0 24 24" // Custom viewBox if needed
+  shapeRendering="geometricPrecision" // SVG attribute
+  focusable={true} // Makes the icon focusable
+/>
+```
+
+### 2. Using Icons in Buttons
+
+```tsx
+import { Button, IconButton } from '@mui/material';
+
+function MyComponent() {
+  return (
+    <>
+      <Button startIcon={<ArrowLeft24Icon />}>
+        Back
+      </Button>
+      
+      <IconButton aria-label="delete">
+        <Bug16Icon />
+      </IconButton>
+    </>
+  );
+}
+```
+
+### 3. Animating Icons
+
+```tsx
+<ArrowLeft24Icon 
+  sx={{ 
+    animation: 'spin 2s linear infinite',
+    '@keyframes spin': {
+      '0%': {
+        transform: 'rotate(0deg)',
+      },
+      '100%': {
+        transform: 'rotate(360deg)',
+      },
+    },
+  }} 
+/>
+```
+
+### 4. Responsive Icon Sizes
+
+```tsx
+<ArrowLeft24Icon 
+  sx={{ 
+    fontSize: {
+      xs: 16, // Extra small devices
+      sm: 20, // Small devices
+      md: 24, // Medium devices
+      lg: 28, // Large devices
+      xl: 32, // Extra large devices
+    },
+  }} 
+/>
+```
+
+### 5. How the Icons Work Internally
+
+Each icon is a React component that wraps the SVG content in MUI's `SvgIcon` component:
+
+```tsx
+import { SvgIcon, SvgIconProps } from "@mui/material";
+
+const ArrowLeft24Icon = (props: Omit<SvgIconProps, "fontSize">) => {
+  const { sx, ...rest } = props;
+  return (
+    <SvgIcon sx={{ fontSize: 24, ...sx }} {...rest}>
+      {/* SVG content here */}
+    </SvgIcon>
+  );
+};
+
+export default ArrowLeft24Icon;
+```
+
+This structure allows you to leverage all the styling and theming capabilities of MUI's `SvgIcon` component while maintaining the specific size and design of each icon.
+
+## How to add new Icons
 
 1. Rename the SVG file to use camelCase eg: `arrowUp.svg`
 2. For monochrome SVGs, `./icons` folder is the main directory to store SVG files. If a new subfolder is required try to use just the size name. eg: `./icons/24px`.
