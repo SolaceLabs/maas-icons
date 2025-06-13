@@ -1,3 +1,18 @@
+<!--
+ Copyright 2023-2025 Solace Systems. All rights reserved.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_11813_57823)">
 <path d="M10.994 3.4C10.994 3.17909 11.1731 3 11.394 3H12.594C12.8149 3 12.994 3.17909 12.994 3.4V13.3099L15.3531 11.1077C15.5068 10.9643 15.7453 10.9643 15.899 11.1077L16.8706 12.0147C17.04 12.1729 17.04 12.4414 16.8706 12.5995L12.2718 16.8925C12.1181 17.0359 11.8796 17.0359 11.7259 16.8925L7.12705 12.5995C6.95765 12.4414 6.95765 12.1729 7.12705 12.0147L8.09866 11.1077C8.25235 10.9643 8.49087 10.9643 8.64456 11.1077L10.994 13.3009V3.4Z" fill="black"/>
