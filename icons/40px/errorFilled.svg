@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M20 36C28.8366 36 36 28.8366 36 20C36 11.1634 28.8366 4 20 4C11.1634 4 4 11.1634 4 20C4 28.8366 11.1634 36 20 36ZM27.5078 14.4971C27.8202 14.1846 27.8202 13.6781 27.5078 13.3657L26.3764 12.2343C26.064 11.9219 25.5575 11.9219 25.2451 12.2343L19.8711 17.6083L14.4971 12.2343C14.1846 11.9219 13.6781 11.9219 13.3657 12.2343L12.2343 13.3657C11.9219 13.6781 11.9219 14.1846 12.2343 14.4971L17.6083 19.8711L12.2343 25.2451C11.9219 25.5575 11.9219 26.064 12.2343 26.3764L13.3657 27.5078C13.6781 27.8202 14.1846 27.8202 14.4971 27.5078L19.8711 22.1338L25.2451 27.5078C25.5575 27.8202 26.064 27.8202 26.3765 27.5078L27.5078 26.3764C27.8202 26.064 27.8202 25.5575 27.5078 25.2451L22.1338 19.8711L27.5078 14.4971Z" fill="black"/>

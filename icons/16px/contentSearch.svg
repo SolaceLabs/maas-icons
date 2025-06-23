@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.40186 3.01177C5.60669 3.01177 5.77463 2.85543 5.82832 2.65777C6.08773 1.70256 6.96174 1 8 1C9.03826 1 9.91227 1.70256 10.1717 2.65777C10.2254 2.85543 10.3933 3.01177 10.5981 3.01177H12.5C13.3284 3.01177 14 3.68334 14 4.51177V8.00688H12.5V4.51029H11V5.60883C11 5.82975 10.8209 6.00883 10.6 6.00883H5.4C5.17909 6.00883 5 5.82974 5 5.60883V4.51029H3.5V13.5015H7V15.0001L3.5 15.0001C2.67157 15.0001 2 14.3285 2 13.5001V4.51177C2 3.68334 2.67157 3.01177 3.5 3.01177H5.40186ZM8.75 3.26146C8.75 3.67527 8.41421 4.01073 8 4.01073C7.58579 4.01073 7.25 3.67527 7.25 3.26146C7.25 2.84765 7.58579 2.5122 8 2.5122C8.41421 2.5122 8.75 2.84765 8.75 3.26146Z" fill="black"/>

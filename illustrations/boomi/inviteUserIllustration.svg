@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M76.5215 75.3009C76.5215 76.4055 75.6261 77.3009 74.5215 77.3009H14.5215C13.4169 77.3009 12.5215 76.4055 12.5215 75.3009V39.1875C12.5215 38.6229 12.7601 38.0847 13.1784 37.7055L43.1784 10.518C43.9406 9.82733 45.1024 9.82733 45.8645 10.518L75.8645 37.7055C76.2829 38.0847 76.5215 38.6229 76.5215 39.1875V75.3009Z" fill="white"/>

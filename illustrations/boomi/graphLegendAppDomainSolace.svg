@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="409" height="137" viewBox="0 0 409 137" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M292.649 46.0427C292.545 46.0427 292.465 46.0187 292.409 45.9707C292.353 45.9147 292.305 45.8387 292.265 45.7427L290.561 40.1747C290.545 40.1347 290.537 40.0947 290.537 40.0547C290.537 39.9827 290.561 39.9227 290.609 39.8747C290.665 39.8267 290.725 39.8027 290.789 39.8027H291.317C291.405 39.8027 291.473 39.8267 291.521 39.8747C291.569 39.9227 291.601 39.9667 291.617 40.0067L292.949 44.5307L294.377 40.0547C294.393 39.9987 294.425 39.9427 294.473 39.8867C294.529 39.8307 294.609 39.8027 294.713 39.8027H295.121C295.225 39.8027 295.305 39.8307 295.361 39.8867C295.417 39.9427 295.449 39.9987 295.457 40.0547L296.885 44.5307L298.217 40.0067C298.225 39.9667 298.253 39.9227 298.301 39.8747C298.349 39.8267 298.417 39.8027 298.505 39.8027H299.033C299.105 39.8027 299.165 39.8267 299.213 39.8747C299.261 39.9227 299.285 39.9827 299.285 40.0547C299.285 40.0947 299.277 40.1347 299.261 40.1747L297.557 45.7427C297.533 45.8387 297.489 45.9147 297.425 45.9707C297.369 46.0187 297.285 46.0427 297.173 46.0427H296.705C296.601 46.0427 296.513 46.0187 296.441 45.9707C296.377 45.9147 296.333 45.8387 296.309 45.7427L294.917 41.4467L293.525 45.7427C293.493 45.8387 293.445 45.9147 293.381 45.9707C293.317 46.0187 293.229 46.0427 293.117 46.0427H292.649Z" fill="#737373"/>

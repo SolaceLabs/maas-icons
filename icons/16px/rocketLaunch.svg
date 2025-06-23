@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00366 4.00139H5.7851C5.28154 4.00139 4.79649 4.19124 4.42671 4.53307L2.13444 6.65209C1.93954 6.83226 1.97078 7.14879 2.19714 7.28738L5.00186 9.00466L7.00257 11.0055L7.00404 11.0074L8.75125 13.8128C8.88309 14.0245 9.1743 14.0653 9.35932 13.8981L11.3466 12.1023C11.7664 11.7228 12.0061 11.1833 12.0061 10.6174V8.00401C13.1116 6.89837 13.7591 5.70112 13.9485 3.50114C13.9816 3.11658 14.0007 3.02458 14.0058 2.40045C14.0077 2.1794 13.8279 1.99967 13.6069 2.00148C12.9828 2.00659 12.8908 2.02571 12.5063 2.05882C10.3064 2.24823 9.10923 2.89575 8.00366 4.00139ZM8.62244 10.7292L9.32656 11.7855L10.5052 10.8033L10.5051 9.27L8.62244 10.7292ZM10.5052 7.38228L10.9448 6.94265C11.491 6.39636 11.8502 5.87879 12.0935 5.19766C12.2458 4.77117 12.3641 4.31956 12.4341 3.57335C11.6613 3.62688 11.2363 3.76162 10.8098 3.91394C10.1288 4.1572 9.61121 4.51645 9.06495 5.06274L8.62535 5.50237L6.44782 8.32799L7.67979 9.56003L10.5052 7.38228ZM5.62356 5.50237L6.75058 5.49853L5.2787 7.38527L4.35594 6.77006L5.62356 5.50237Z" fill="black"/>

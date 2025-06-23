@@ -286,6 +286,18 @@ This structure allows you to leverage all the styling and theming capabilities o
 
    <img width="1581" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/0adff151-0a3b-4aaf-8056-8019b59f7773">
 
+## Updating Copyright Notices
+
+To ensure all SVG files have an up-to-date copyright notice, you can run the `addCopyrightToSvgs.js` script. This script will automatically add or update the copyright header in all SVG files across the `icons`, `illustrations`, `images`, and `logo` directories.
+
+The script dynamically sets the copyright year to the current year, so you can run it at any time to keep the copyright notices current.
+
+To run the script, use the following command:
+
+```bash
+node scripts/addCopyrightToSvgs.js
+```
+
 ## License
 
-MIT © [](https://github.com/)
+Apache-2.0 © [Solace Systems](https://github.com/SolaceDev)

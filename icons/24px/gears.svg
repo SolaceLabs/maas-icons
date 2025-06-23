@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14.5978 22C14.3234 22 14.0872 21.8023 14.0333 21.5276L13.7138 19.9C13.439 19.7833 13.1814 19.6608 12.941 19.5325C12.7005 19.4042 12.4544 19.2467 12.2025 19.06L10.6451 19.5525C10.3902 19.6331 10.1145 19.5242 9.97898 19.2894L9.07981 17.7319C8.93871 17.4875 8.98863 17.175 9.19847 16.9891L10.4163 15.91C10.3705 15.6067 10.3476 15.3033 10.3476 15C10.3476 14.6967 10.3705 14.3933 10.4163 14.09L9.19847 13.0109C8.98863 12.825 8.93871 12.5125 9.07981 12.2681L9.97898 10.7106C10.1145 10.4758 10.3902 10.3669 10.6451 10.4475L12.2025 10.94C12.4544 10.7533 12.7005 10.5958 12.941 10.4675C13.1814 10.3392 13.439 10.2167 13.7138 10.1L14.0333 8.47242C14.0872 8.1977 14.3234 8 14.5978 8H16.4022C16.6766 8 16.9128 8.1977 16.9667 8.47242L17.2862 10.1C17.5609 10.2167 17.8186 10.3392 18.059 10.4675C18.2995 10.5958 18.5456 10.7533 18.7975 10.94L20.3549 10.4475C20.6098 10.3669 20.8855 10.4758 21.021 10.7106L21.9202 12.2681C22.0613 12.5125 22.0114 12.825 21.8015 13.0109L20.5837 14.09C20.6295 14.3933 20.6524 14.6967 20.6524 15C20.6524 15.3033 20.6295 15.6067 20.5837 15.91L21.8015 16.9891C22.0114 17.175 22.0613 17.4875 21.9202 17.7319L21.021 19.2894C20.8855 19.5242 20.6098 19.6331 20.3549 19.5525L18.7975 19.06C18.5456 19.2467 18.2995 19.4042 18.059 19.5325C17.8186 19.6608 17.5609 19.7833 17.2862 19.9L16.9667 21.5276C16.9128 21.8023 16.6766 22 16.4022 22H14.5978ZM15.5 17.8C16.2557 17.8 16.9026 17.5258 17.4407 16.9775C17.9789 16.4292 18.2479 15.77 18.2479 15C18.2479 14.23 17.9789 13.5708 17.4407 13.0225C16.9026 12.4742 16.2557 12.2 15.5 12.2C14.7443 12.2 14.0974 12.4742 13.5593 13.0225C13.0211 13.5708 12.7521 14.23 12.7521 15C12.7521 15.77 13.0211 16.4292 13.5593 16.9775C14.0974 17.5258 14.7443 17.8 15.5 17.8Z" fill="black"/>

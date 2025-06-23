@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 3C19.6569 3 21 4.3428 21 6C21 7.6572 19.6569 9 18 9C16.3431 9 15 7.6572 15 6C15 4.3428 16.3431 3 18 3ZM18 5C18.5523 5 19 5.4473 19 6C19 6.5527 18.5523 7 18 7C17.4477 7 17 6.5527 17 6C17 5.4473 17.4477 5 18 5ZM7 13C7.7432 13 8.4391 13.2021 9.0354 13.5557L11.592 11H8.5C8.2238 11 8 10.7764 8 10.5V9.5C8 9.2236 8.2238 9 8.5 9H14.5C14.5345 9 14.5682 9.0029 14.6008 9.0098C14.8286 9.0567 15 9.2578 15 9.5V15.5C15.0001 15.7764 14.7763 16 14.5001 16H13.5001C13.224 16 13.0001 15.7764 13.0001 15.5V12.4199L10.4485 14.9717C10.799 15.5664 11 16.2598 11 17C11 19.209 9.2091 21 7 21C4.7909 21 3 19.209 3 17C3 14.791 4.7909 13 7 13ZM7 15C8.1046 15 9 15.8955 9 17C9 18.1045 8.1046 19 7 19C5.8954 19 5 18.1045 5 17C5 15.8955 5.8954 15 7 15Z" fill="black"/>
