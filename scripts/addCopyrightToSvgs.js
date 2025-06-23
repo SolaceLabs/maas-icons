@@ -87,7 +87,19 @@ async function addOrUpdateCopyright(filePath) {
       console.log(`Updated copyright header in ${filePath}`);
     } else {
       // If no copyright exists, add it.
-      updatedContent = copyrightHeader + content;
+      // Check if content starts with XML declaration
+      const xmlDeclarationRegex = /^\s*<\?xml[^>]*\?>/;
+      const xmlMatch = content.match(xmlDeclarationRegex);
+
+      if (xmlMatch) {
+        // Insert copyright after XML declaration
+        const xmlDeclaration = xmlMatch[0];
+        const restOfContent = content.substring(xmlMatch.index + xmlMatch[0].length);
+        updatedContent = xmlDeclaration + '\n' + copyrightHeader + restOfContent;
+      } else {
+        // No XML declaration, add copyright at the beginning
+        updatedContent = copyrightHeader + content;
+      }
       console.log(`Added copyright header to ${filePath}`);
     }
     
