@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4416 5.84094L35.8577 33.1995C36.3383 34.1606 35.5374 35.442 34.4161 35.442H5.58388C4.46263 35.442 3.66173 34.1606 4.14227 33.1995L18.5584 5.84094C19.1991 4.71969 20.8009 4.71969 21.4416 5.84094ZM18.4161 28.0658C18.4161 27.7454 18.7365 27.4251 19.0568 27.4251H20.979C21.2993 27.4251 21.6197 27.7454 21.6197 28.0658V30.1C21.6197 30.4364 21.2993 30.6286 20.979 30.6286H19.0568C18.7365 30.6286 18.4161 30.4364 18.4161 30.1V28.0658ZM18.4161 18.455C18.4161 18.1347 18.7365 17.8143 19.0568 17.8143H20.979C21.2993 17.8143 21.6197 18.1347 21.6197 18.455V25.1825C21.6197 25.5029 21.2993 25.8233 20.979 25.8233H19.0568C18.7365 25.8233 18.4161 25.5029 18.4161 25.1825V18.455Z" fill="black"/>

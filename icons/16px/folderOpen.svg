@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+  Copyright 2023-2025 Solace Systems. All rights reserved.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.30233 13C1.94419 13 1.6376 12.8776 1.38256 12.6328C1.12752 12.388 1 12.0938 1 11.75V4.25C1 3.90625 1.12752 3.61198 1.38256 3.36719C1.6376 3.1224 1.94419 3 2.30233 3H6.5L8 4.25H13C13.3581 4.25 13.6957 4.3724 13.9508 4.61719C14.2058 4.86198 14.5 5.15625 14.5 5.5H7.5L6 4.25H2.5V11.75L4.5 6.5H15L13.3233 12.1094C13.2364 12.3802 13.0764 12.5964 12.843 12.7578C12.6097 12.9193 12.3519 13 12.0698 13H2.30233ZM4 11.75H12L13.3233 7.64671H5.5L4 11.75Z" fill="black"/>
