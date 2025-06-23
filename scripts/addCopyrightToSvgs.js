@@ -18,8 +18,14 @@
 const fs = require("fs").promises;
 const path = require("path");
 
+// Configuration
+const START_YEAR = 2023;
+const CURRENT_YEAR = new Date().getFullYear();
+const COPYRIGHT_HOLDER = "Solace Systems. All rights reserved.";
+
+// Dynamically generate the copyright header.
 const copyrightHeader = `<!--
- Copyright 2023-2025 Solace Systems. All rights reserved.
+ Copyright ${START_YEAR}-${CURRENT_YEAR} ${COPYRIGHT_HOLDER}
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -64,34 +70,41 @@ async function findSvgFiles(dir) {
 }
 
 /**
- * Adds copyright header to an SVG file if it doesn't already have one
+ * Adds or updates the copyright header in an SVG file.
+ * This function is idempotent and can be run multiple times.
  * @param {string} filePath - Path to the SVG file
  */
-async function addCopyrightToSvg(filePath) {
+async function addOrUpdateCopyright(filePath) {
   try {
     const content = await fs.readFile(filePath, 'utf8');
-    
-    // Check if copyright header already exists
-    if (content.includes('Copyright 2023-2025 Solace Systems')) {
-      console.log(`Skipping ${filePath} - copyright header already exists`);
-      return;
+    const copyrightRegex = /<!--\s*Copyright [\d-]+ Solace Systems\. All rights reserved\.[\s\S]*?-->/;
+
+    let updatedContent;
+
+    if (copyrightRegex.test(content)) {
+      // If copyright exists, replace it.
+      updatedContent = content.replace(copyrightRegex, copyrightHeader);
+      console.log(`Updated copyright header in ${filePath}`);
+    } else {
+      // If no copyright exists, add it.
+      updatedContent = copyrightHeader + content;
+      console.log(`Added copyright header to ${filePath}`);
     }
     
-    // Add copyright header before the <svg> tag
-    const updatedContent = copyrightHeader + content;
-    
     await fs.writeFile(filePath, updatedContent, 'utf8');
-    console.log(`Added copyright header to ${filePath}`);
+
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
 /**
- * Main function to add copyright headers to all SVG files
+ * Main function to add or update copyright headers in all SVG files.
+ * To run this script, use the command: node scripts/addCopyrightToSvgs.js
+ * This will update the copyright year to the current year in all SVG files.
  */
 async function main() {
-  console.log('Adding copyright headers to SVG files...');
+  console.log('Adding or updating copyright headers in SVG files...');
   
   const directories = ['icons', 'illustrations', 'images', 'logo'];
   
@@ -102,14 +115,14 @@ async function main() {
       console.log(`Found ${svgFiles.length} SVG files in ${dir}`);
       
       for (const file of svgFiles) {
-        await addCopyrightToSvg(file);
+        await addOrUpdateCopyright(file);
       }
     } catch (error) {
       console.error(`Error processing directory ${dir}:`, error.message);
     }
   }
   
-  console.log('Finished adding copyright headers to SVG files.');
+  console.log('Finished adding or updating copyright headers in SVG files.');
 }
 
 main().catch(console.error);
