@@ -20,6 +20,11 @@ jobs:
       - run: npm ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run FOSSA Scan
+        uses: fossas/fossa-action@v1.7.0 # Use a specific version if locking is preferred
+        continue-on-error: true
+        with:
+          api-key: ${{secrets.FOSSA_API_KEY}}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
