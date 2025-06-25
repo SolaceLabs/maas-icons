@@ -1,56 +1,16 @@
-# FOSSA configuration for @solacedev/maas-icons
-# This configuration ignores development dependencies to focus on production dependencies only
-
 version: 3
 
 targets:
-  # Main package configuration
   maas-icons:
     type: npm
     path: .
     options:
       production-only: true
-      include-dev-deps: false
-
-  # Docs package configuration
   maas-icons-docs:
     type: npm
     path: docs
     options:
       production-only: true
-      include-dev-deps: false
 
-# Global project configuration
 project:
   name: "@solacedev/maas-icons"
-
-# Analysis configuration
-analyze:
-  # Exclude development dependencies
-  exclude:
-    - "devDependencies"
-
-  # Only analyze production dependencies
-  production-only: true
-
-# Skip analysis of certain file types that are not relevant for license compliance
-exclude:
-  - "**/*.svg"
-  - "**/*.png"
-  - "**/*.jpg"
-  - "**/*.jpeg"
-  - "**/*.gif"
-  - "**/*.ico"
-  - "**/node_modules/**"
-  - "**/dist/**"
-  - "**/build/**"
-  - "**/coverage/**"
-  - "**/.git/**"
-  - "**/optimized/**"
-  - "**/optimizedIllustrations/**"
-  - "**/optimizedImages/**"
-  - "**/reactGenerated/**"
-
-# Ensure only production dependencies are scanned
-experimental:
-  skip-dev-dependencies: true
