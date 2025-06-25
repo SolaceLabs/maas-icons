@@ -4,13 +4,6 @@ targets:
   maas-icons:
     type: npm
     path: .
-    options:
-      production-only: true
-  maas-icons-docs:
-    type: npm
-    path: docs
-    options:
-      production-only: true
 
 project:
   name: "@solacedev/maas-icons"
