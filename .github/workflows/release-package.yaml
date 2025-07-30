@@ -14,9 +14,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-          registry-url: "https://npm.pkg.github.com"
-          # Defaults to the user or organization that owns the workflow file
-          scope: "@solacedev"
+          registry-url: "https://registry.npmjs.org/"
+          scope: "@solace-labs"
       - run: npm ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,4 +26,4 @@ jobs:
           api-key: ${{secrets.FOSSA_API_KEY}}
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

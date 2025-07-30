@@ -1,11 +1,12 @@
 {
-  "name": "@solacedev/maas-icons",
+  "name": "@solace-labs/maas-icons",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solacedev/maas-icons.git"
+    "url": "git+https://github.com/solacelabs/maas-icons.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/solacedev"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "keywords": [
     "icons",
@@ -14,7 +15,7 @@
     "solace"
   ],
   "bugs": {
-    "url": "https://github.com/solacedev/maas-ux-icons/issues"
+    "url": "https://github.com/solacelabs/maas-ux-icons/issues"
   },
   "author": "Kevin Lidstone",
   "version": "0.2.147",
