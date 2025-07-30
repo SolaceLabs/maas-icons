@@ -29,7 +29,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "SolaceDev", // Usually your GitHub org/user name.
+  organizationName: "SolaceLabs", // Usually your GitHub org/user name.
   projectName: "maas-ui", // Usually your repo name.
 
   onBrokenLinks: "throw",

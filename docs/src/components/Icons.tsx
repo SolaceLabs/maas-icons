@@ -15,7 +15,7 @@
  */
 
 import React from "react";
-import * as maasicons from "@solacedev/maas-icons";
+import * as maasicons from "@solace-labs/maas-icons";
 import {
   Box,
   FormControl,
@@ -69,7 +69,7 @@ export default function Icons() {
             <IconButton
               onClick={() => {
                 navigator.clipboard
-                  .writeText(`import { ${icon.importName} } from "@SolaceDev/maas-icons";
+                  .writeText(`import { ${icon.importName} } from "@solace-labs/maas-icons";
 `);
                 setShowCopied(true);
               }}
