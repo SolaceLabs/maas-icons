@@ -6,27 +6,12 @@
 
 ## Overview
 
-The `@solacedev/maas-icons` library provides a collection of SVG icons that are wrapped in Material UI's `SvgIcon` component. The icons are organized by size (16px, 24px, 32px, 40px) and are available as React components.
-
-## Setup npm registry
-
-Before installing the package this step needs to be completed.
-
-You can authenticate to GitHub Packages with npm by creating a `~/.npmrc` file in your root directory.
-
-```
-@solacedev:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=GITHUB_TOKEN
-```
-
-GITHUB_TOKEN needs to be replaced by user specific github token. Make sure the package permissions ( write:packages, read:packages ) are correctly selected during token creation, and SSO is also enabled.
-
-See this [link](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to see how to create github token. Read more about [packages](https://docs.github.com/en/packages/learn-github-packages/about-permissions-for-github-packages) permissions.
+The `@solace-labs/maas-icons` library provides a collection of SVG icons that are wrapped in Material UI's `SvgIcon` component. The icons are organized by size (16px, 24px, 32px, 40px) and are available as React components.
 
 ## Install
 
 ```bash
-npm install --save @solacedev/maas-icons
+npm install --save @solace-labs/maas-icons
 ```
 
 ## Basic Usage
@@ -37,7 +22,7 @@ Icons are named based on their filename and size. For example, `arrowLeft.svg` i
 
 ```tsx
 import { ReactElement } from "react";
-import { ArrowLeft24Icon, Bug16Icon } from "@solacedev/maas-icons";
+import { ArrowLeft24Icon, Bug16Icon } from "@solace-labs/maas-icons";
 
 const App = (): ReactElement => {
   return (
@@ -55,8 +40,8 @@ const App = (): ReactElement => {
 To import an illustration using ReactJS (assuming you have proper SVG support with babel/webpack):
 
 ```tsx
-import { SolaceIcon } from "@SolaceDev/maas-react-components";
-import { ReactComponent as Designer } from "@solacedev/maas-icons/dist/illustrations/designer.svg";
+import { SolaceIcon } from "@solace-labs/maas-react-components";
+import { ReactComponent as Designer } from "@solace-labs/maas-icons/dist/illustrations/designer.svg";
 
 const Demo = (): ReactElement => {
   return (
@@ -276,16 +261,28 @@ This structure allows you to leverage all the styling and theming capabilities o
 
 6. Publish new version when changes are merged:
 
-   <img width="298" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/4aab42ee-5c07-4539-97e9-ad8074a18975">
+   <img width="298" alt="image" src="https://github.com/SolaceLabs/maas-icons/assets/102637515/4aab42ee-5c07-4539-97e9-ad8074a18975">
 
    Navigate to releases, then click on draft new release, select the tag corresponding to the semantic version you just created, generate release notes then click on publish release.
 
-   <img width="980" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/eaef76d2-11f2-4296-9f55-2a71a9a6cde5">
+   <img width="980" alt="image" src="https://github.com/SolaceLabs/maas-icons/assets/102637515/eaef76d2-11f2-4296-9f55-2a71a9a6cde5">
 
    You can monitor the state of your release under the Actions tab.
 
-   <img width="1581" alt="image" src="https://github.com/SolaceDev/maas-icons/assets/102637515/0adff151-0a3b-4aaf-8056-8019b59f7773">
+   <img width="1581" alt="image" src="https://github.com/SolaceLabs/maas-icons/assets/102637515/0adff151-0a3b-4aaf-8056-8019b59f7773">
+
+## Updating Copyright Notices
+
+To ensure all SVG files have an up-to-date copyright notice, you can run the `addCopyrightToSvgs.js` script. This script will automatically add or update the copyright header in all SVG files across the `icons`, `illustrations`, `images`, and `logo` directories.
+
+The script dynamically sets the copyright year to the current year, so you can run it at any time to keep the copyright notices current.
+
+To run the script, use the following command:
+
+```bash
+node scripts/addCopyrightToSvgs.js
+```
 
 ## License
 
-MIT © [](https://github.com/)
+Apache-2.0 © [Solace Systems](https://github.com/SolaceLabs)

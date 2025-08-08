@@ -1,0 +1,9 @@
+version: 3
+
+targets:
+  maas-icons:
+    type: npm
+    path: .
+
+project:
+  name: "@solace-labs/maas-icons"

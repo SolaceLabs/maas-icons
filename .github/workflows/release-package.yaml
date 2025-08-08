@@ -14,12 +14,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-          registry-url: "https://npm.pkg.github.com"
-          # Defaults to the user or organization that owns the workflow file
-          scope: "@solacedev"
+          registry-url: "https://registry.npmjs.org/"
+          scope: "@solace-labs"
       - run: npm ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run FOSSA Scan
+        uses: fossas/fossa-action@v1.7.0 # Use a specific version if locking is preferred
+        continue-on-error: true
+        with:
+          api-key: ${{secrets.FOSSA_API_KEY}}
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
